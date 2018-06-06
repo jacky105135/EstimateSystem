@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.project.TChangeRec1">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorblue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mini-CEX"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/greenrack"
+                android:backgroundTint="#f67280"
+                android:paddingStart="150dp"
+                android:text="地點"
+                android:textColor="@color/colorwhite"
+                android:textSize="25sp"
+                />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/position"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radiobutton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="門診"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/radiobutton1"
+                    android:text="急診"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/radiobutton2"
+                    android:text="病房"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="加護病房"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/radiobutton4"
+                    android:text="其他"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/patient"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/radioGroup2"
+                android:background="@drawable/greenrack"
+                android:backgroundTint="#f67280"
+                android:paddingStart="150dp"
+                android:text="病人"
+                android:textColor="@color/colorwhite"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/patient"
+                android:paddingStart="4dp"
+                android:text="性別"
+                android:textSize="22sp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/state"
+                android:layout_below="@+id/state"
+                android:paddingStart="4dp"
+                android:text="年齡"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/agenum"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/radioGroup4"
+                android:layout_below="@+id/radioGroup4"
+                android:background="#fafafa"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/patient"
+                android:layout_marginLeft="60dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/man"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:drawableRight="@drawable/man"
+                    android:paddingEnd="70sp"
+                    android:text="男"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/woman"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:drawableRight="@drawable/woman"
+                    android:paddingEnd="70sp"
+                    android:text="女"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/sex"
+                android:layout_below="@+id/sex"
+                android:paddingStart="4dp"
+                android:text="身分"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="309dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/radioGroup3"
+                android:layout_marginLeft="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/newpatient"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="新病人"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/oldpatient"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="舊病人"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/anal"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/age"
+                android:paddingStart="4dp"
+                android:text="診斷"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/analyze"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/agenum"
+                android:layout_marginLeft="60dp"
+                android:background="#fafafa"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/operation"
+                android:layout_width="61dp"
+                android:layout_height="65dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/analyze"
+                android:paddingStart="4dp"
+                android:text="處置操作"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/operate"
+                android:layout_width="300dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/analyze"
+                android:layout_marginLeft="60dp"
+                android:textSize="20sp"
+                android:background="#fafafa"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/racktangle"
+        android:backgroundTint="#B3B3B3"
+        android:text="下一步"
+        android:textColor="@color/colorwhite"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

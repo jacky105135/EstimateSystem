@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.project.Main4Activity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorblue"
+        android:textStyle="bold">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密碼設定"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/identidied"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/box_1"
+        android:text="身分驗證"
+        android:textSize="18sp"
+        android:textColor="@color/colorgreen3"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/write"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@+id/identidied"
+        android:layout_marginLeft="113dp"
+        android:background="@drawable/box_2"
+        android:gravity="center"
+        android:text=" 設定新密碼"
+        android:textColor="@color/colorgreen3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/finish"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/write"
+        android:background="@drawable/box_3_1"
+        android:gravity="center"
+        android:text="設定完成"
+        android:textAlignment="center"
+        android:textColor="@color/colorgreen3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"/>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

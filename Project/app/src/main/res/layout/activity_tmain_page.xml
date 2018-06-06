@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.project.TMainPage">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorblue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的主頁"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/documents"
+        android:paddingStart="55dp"
+        android:layout_marginStart="37dp"
+        android:background="@drawable/btn1"
+        android:stateListAnimator="@null"
+        android:text="我的評分"
+        android:drawablePadding="-75dp"
+        android:textColor="@color/colorwhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/contract"
+        android:paddingStart="55dp"
+        android:layout_marginStart="37dp"
+        android:background="@drawable/btn2"
+        android:stateListAnimator="@null"
+        android:text="前往評分"
+        android:textColor="@color/colorwhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btn1"
+        android:layout_marginTop="25dp"
+        android:drawablePadding="-75dp"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/chat"
+        android:paddingStart="55dp"
+        android:layout_marginStart="37dp"
+        android:background="@drawable/btn3"
+        android:stateListAnimator="@null"
+        android:text="學員回饋"
+        android:textColor="@color/colorwhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btn2"
+        android:layout_marginTop="25dp"
+        android:drawablePadding="-75dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:background="@drawable/circle"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorgray"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.project.tchange_rec2">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorblue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mini-CEX"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/set"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/greenrack"
+                android:backgroundTint="#f67280"
+                android:paddingStart="130dp"
+                android:text="評量項目"
+                android:textColor="@color/colorwhite"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/set"
+                android:text="醫療面談"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/a"
+                android:layout_marginTop="33dp"
+                android:text="身體檢查"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/b"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/b"
+                android:layout_marginTop="33dp"
+                android:text="操作技能"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/c"
+                android:layout_marginTop="33dp"
+                android:text="諮商衛教"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/d"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/d"
+                android:layout_marginTop="33dp"
+                android:text="臨床判斷"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/e"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/e"
+                android:layout_marginTop="33dp"
+                android:text="組織效能"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/f"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/set"
+                android:layout_below="@+id/f"
+                android:layout_marginTop="33dp"
+                android:text="人道專業"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/g"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/one7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未符要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/two7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="達到要求"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/three7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="優秀"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/four7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A*"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/racktangle"
+        android:backgroundTint="#B3B3B3"
+        android:text="下一步"
+        android:textColor="@color/colorwhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
