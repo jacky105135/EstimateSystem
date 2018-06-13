@@ -3,4 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/excellent"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/greenrack"
+        android:backgroundTint="#f67280"
+        android:paddingStart="110dp"
+        android:text="綜合能力分析"
+        android:textColor="@color/colorwhite"
+        android:textSize="25sp" />
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/radarchart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/excellent">
+    </com.github.mikephil.charting.charts.RadarChart>
+
 </RelativeLayout>

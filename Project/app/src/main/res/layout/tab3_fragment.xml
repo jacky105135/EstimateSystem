@@ -17,6 +17,14 @@
         android:textColor="@color/colorwhite"
         android:textSize="25sp" />
 
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/radarchart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/excellent"
+        android:layout_marginBottom="100dp">
+
+    </com.github.mikephil.charting.charts.RadarChart>
     <Button
         android:id="@+id/stufeedback"
         android:layout_width="360dp"

@@ -7,4 +7,11 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_trend">trendActivity</string>
+    <string name="ex1">醫療面談</string>
+    <string name="ex2">身體檢查</string>
+    <string name="ex3">操作技能</string>
+    <string name="ex4">諮商衛教</string>
+    <string name="ex5">臨床判斷</string>
+    <string name="ex6">組織效能</string>
+    <string name="ex7">人道專業</string>
 </resources>
