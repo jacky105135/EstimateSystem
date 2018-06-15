@@ -49,6 +49,9 @@ public class StuMainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
+                Bundle b = new Bundle();
+                b.putString("stuid",stuid);
+                i.putExtras(b);
                 i.setClass(StuMainPage.this, Main14Activity.class);
                 startActivity(i);
             }

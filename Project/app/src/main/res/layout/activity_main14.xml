@@ -26,4 +26,23 @@
 
     </android.support.v7.widget.Toolbar>
 
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+    </RelativeLayout>
+
+</ScrollView>
 </RelativeLayout>
