@@ -83,6 +83,12 @@ public class Main12Activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
 
+            case R.id.backtomain:
+                Intent intent2 = new Intent();
+                intent2.setClass(Main12Activity.this, TMainPage.class);
+                startActivity(intent2);
+                return true;
+
             case R.id.password:
                 Intent intent = new Intent();
                 intent.setClass(Main12Activity.this,Main5Activity.class);

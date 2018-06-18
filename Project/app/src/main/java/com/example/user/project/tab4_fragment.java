@@ -120,7 +120,7 @@ public class tab4_fragment extends Fragment {
                 score = getRandom(7,9);
             }else if(list[z].equals("達到要求")){
                 score = getRandom(4,6);
-            }else if(list[z].equals("未達要求")){
+            }else if(list[z].equals("未符要求")){
                 score = getRandom(1,3);
             }else{
                 score = 0;

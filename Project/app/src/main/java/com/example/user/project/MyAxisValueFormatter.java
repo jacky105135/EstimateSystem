@@ -13,12 +13,12 @@ public class MyAxisValueFormatter implements IAxisValueFormatter {
     private DecimalFormat mFormat;
 
    public MyAxisValueFormatter(){
-       mFormat = new DecimalFormat("#######.0");
+       mFormat = new DecimalFormat("#######");
    }
 
     @Override
     public String getFormattedValue(float value, AxisBase axis) {
-        return mFormat.format(value);
+        return "第 " + mFormat.format(value) + " 次" ;
     }
 
     @Override

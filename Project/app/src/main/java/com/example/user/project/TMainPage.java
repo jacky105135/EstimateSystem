@@ -1,6 +1,8 @@
 package com.example.user.project;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -39,8 +41,10 @@ public class TMainPage extends AppCompatActivity {
         btn2 = (Button)findViewById(R.id.btn2);
         btn3 = (Button)findViewById(R.id.btn3);
 
-        Bundle bb =this.getIntent().getExtras();
-        final String tname = bb.getString("name");
+       // Bundle bb =this.getIntent().getExtras();
+        //final String tname = bb.getString("name");
+        SharedPreferences msg2 = getSharedPreferences("Tlogin_msg", Context.MODE_PRIVATE);
+        final String tname = msg2.getString("name","");
         textView2.setText(tname);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +120,7 @@ public class TMainPage extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main13,menu);
         return true;
     }
 

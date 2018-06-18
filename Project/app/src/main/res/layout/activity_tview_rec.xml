@@ -12,8 +12,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:paddingTop="@dimen/appbar_padding_top">
 
         <android.support.v7.widget.Toolbar
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -36,6 +35,7 @@
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
+            app:tabTextColor="@color/colorwhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

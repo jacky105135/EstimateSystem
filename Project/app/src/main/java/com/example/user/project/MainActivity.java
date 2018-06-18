@@ -176,9 +176,13 @@ public class MainActivity extends AppCompatActivity {
                 String a = response.toString();
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this , TMainPage.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("name", a);
-                intent.putExtras(bundle);
+                SharedPreferences msp2 = getSharedPreferences("Tlogin_msg", MODE_PRIVATE);
+                msp2.edit()
+                        .putString("name",a)
+                        .apply();
+                //Bundle bundle = new Bundle();
+                //bundle.putString("name", a);
+                //intent.putExtras(bundle);
                 startActivity(intent);
             }
             catch (Exception e)
@@ -204,10 +208,15 @@ public class MainActivity extends AppCompatActivity {
                 String a = response.toString();
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this , StuMainPage.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("name", a);
-                bundle.putString("stuid",username.getText().toString());
-                intent.putExtras(bundle);
+                SharedPreferences msp1 = getSharedPreferences("login_msg", MODE_PRIVATE);
+                msp1.edit()
+                        .putString("name",a)
+                        .putString("stuid",username.getText().toString())
+                        .apply();
+                //Bundle bundle = new Bundle();
+                //bundle.putString("name", a);
+                //bundle.putString("stuid",username.getText().toString());
+                //intent.putExtras(bundle);
                 startActivity(intent);
             }
             catch (Exception e)

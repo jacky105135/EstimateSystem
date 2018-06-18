@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="我的主頁"
+            android:text="首頁"
             android:textColor="#ffffff"
             android:textSize="22sp"
             android:textStyle="bold" />

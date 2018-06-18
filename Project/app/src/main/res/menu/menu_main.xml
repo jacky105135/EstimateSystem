@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item android:id="@+id/backtomain"
+        android:title="回首頁"
+        android:orderInCategory="100"/>
+
     <item android:id="@+id/password"
         android:title="密碼設定"
         android:orderInCategory="100"/>

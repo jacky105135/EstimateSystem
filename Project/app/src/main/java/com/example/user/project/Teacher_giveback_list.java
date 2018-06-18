@@ -154,6 +154,11 @@ public class Teacher_giveback_list extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
 
+            case R.id.backtomain:
+                Intent intent2 = new Intent(Teacher_giveback_list.this,StuMainPage.class);
+                startActivity(intent2);
+                return true;
+
             case R.id.password:
                 Intent intent= new Intent();
                 intent.setClass(Teacher_giveback_list.this,Main5Activity.class);
@@ -170,5 +175,5 @@ public class Teacher_giveback_list extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    }
+}
 

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.project.TGBView">
 
-
     <android.support.v7.widget.Toolbar
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"

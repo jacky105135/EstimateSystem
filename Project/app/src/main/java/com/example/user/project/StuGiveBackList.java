@@ -49,7 +49,7 @@ public class StuGiveBackList extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        Bundle bb =this.getIntent().getExtras();
+        Bundle bb = this.getIntent().getExtras();
 
         if (bb != null) {
             a = bb.getString("id");
@@ -94,12 +94,12 @@ public class StuGiveBackList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(StuGiveBackList.this, TGBView.class);
-                String stuid = (String) adapter.getItem(position*4);
-                String date = (String) adapter.getItem(position*4+1);
+                String stuid = (String) adapter.getItem(position * 4);
+                String date = (String) adapter.getItem(position * 4 + 1);
                 Bundle bb = new Bundle();
-                bb.putString("stuid",stuid);
-                bb.putString("Tname",a);
-                bb.putString("date",date);
+                bb.putString("stuid", stuid);
+                bb.putString("Tname", a);
+                bb.putString("date", date);
                 intent.putExtras(bb);
                 startActivity(intent);
             }
@@ -129,7 +129,7 @@ public class StuGiveBackList extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return (response.length)/4;
+            return (response.length) / 4;
         }
 
         @Override
@@ -151,33 +151,40 @@ public class StuGiveBackList extends AppCompatActivity {
             TextView content = (TextView) convertView.findViewById(R.id.content);
             TextView time = (TextView) convertView.findViewById(R.id.time);
 
-            date.setText(response[(position*4) + 1]);
-            stu_id.setText(response[position*4]);
-            content.setText(response[(position*4) + 2]);
-            time.setText(response[(position*4) + 3]);
+            date.setText(response[(position * 4) + 1]);
+            stu_id.setText(response[position * 4]);
+            content.setText(response[(position * 4) + 2]);
+            time.setText(response[(position * 4) + 3]);
 
             return convertView;
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
+            case R.id.backtomain:
+                Intent intent2 = new Intent();
+                intent2.setClass(StuGiveBackList.this, TMainPage.class);
+                startActivity(intent2);
+                return true;
+
             case R.id.password:
-                Intent intent= new Intent();
-                intent.setClass(StuGiveBackList.this,Main5Activity.class);
+                Intent intent = new Intent();
+                intent.setClass(StuGiveBackList.this, Main5Activity.class);
                 startActivity(intent);
                 return true;
 
             case R.id.logout:
                 Intent intent1 = new Intent();
-                intent1.setClass(StuGiveBackList.this,MainActivity.class);
+                intent1.setClass(StuGiveBackList.this, MainActivity.class);
                 startActivity(intent1);
                 return true;
 

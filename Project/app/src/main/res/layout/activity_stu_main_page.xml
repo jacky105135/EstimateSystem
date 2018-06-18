@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.project.StuMainPage">
 
-    <android.support.v7.widget.Toolbar
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        app:titleTextColor="@android:color/white"
-        android:background="@color/colorblue">
+        android:background="@color/colorblue"
+        app:titleTextColor="@android:color/white">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="我的主頁"
+            android:text="首頁"
             android:textColor="#ffffff"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -32,13 +31,13 @@
         android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:drawableLeft="@drawable/trend"
-        android:paddingStart="55dp"
         android:layout_marginStart="37dp"
         android:background="@drawable/btn1"
+        android:drawableLeft="@drawable/trend"
+        android:drawablePadding="-75dp"
+        android:paddingStart="55dp"
         android:stateListAnimator="@null"
         android:text="趨勢圖"
-        android:drawablePadding="-75dp"
         android:textColor="@color/colorwhite"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -48,38 +47,38 @@
         android:layout_width="291dp"
         android:layout_height="65dp"
         android:layout_alignParentStart="true"
+        android:layout_below="@id/btn1"
         android:layout_centerVertical="true"
-        android:drawableLeft="@drawable/analyze"
-        android:paddingStart="55dp"
         android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/btn2"
+        android:drawableLeft="@drawable/analyze"
+        android:drawablePadding="-75dp"
+        android:paddingStart="55dp"
         android:stateListAnimator="@null"
         android:text="歷次評分"
         android:textColor="@color/colorwhite"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@id/btn1"
-        android:layout_marginTop="25dp"
-        android:drawablePadding="-75dp"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="291dp"
         android:layout_height="65dp"
         android:layout_alignParentStart="true"
+        android:layout_below="@id/btn2"
         android:layout_centerVertical="true"
-        android:drawableLeft="@drawable/chat2"
-        android:paddingStart="55dp"
         android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/btn3"
+        android:drawableLeft="@drawable/chat2"
+        android:drawablePadding="-75dp"
+        android:paddingStart="55dp"
         android:stateListAnimator="@null"
         android:text="回饋"
         android:textColor="@color/colorwhite"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@id/btn2"
-        android:layout_marginTop="25dp"
-        android:drawablePadding="-75dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView2"
@@ -89,10 +88,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="98dp"
         android:background="@drawable/circle"
-        android:text="TextView"
-        android:textSize="20dp"
         android:gravity="center"
+        android:text="TextView"
         android:textColor="@color/colorgray"
-        android:textStyle="bold"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

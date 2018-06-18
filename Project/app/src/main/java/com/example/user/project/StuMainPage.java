@@ -1,6 +1,8 @@
 package com.example.user.project;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,13 +21,16 @@ import javax.xml.transform.Templates;
 
 public class StuMainPage extends AppCompatActivity {
 
-    Button btn1,btn2,btn3;
+    Button btn1, btn2, btn3;
     TextView textView2;
-    private static  final String NAMESPACE = "http://tempuri.org/";
+    private static final String NAMESPACE = "http://tempuri.org/";
     private static final String URL = "http://123.193.214.240:8008/WebService1.asmx";
     private static final String METHOD_USERNAME_3 = "select_listview";
+    private static final String METHOD_USERNAME_4 = "gettrend";
+
     private String stuid;
     android.support.v7.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,25 +40,24 @@ public class StuMainPage extends AppCompatActivity {
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btn1 = (Button)findViewById(R.id.btn1);
-        btn2 = (Button)findViewById(R.id.btn2);
-        btn3 = (Button)findViewById(R.id.btn3);
-        textView2 = (TextView)findViewById(R.id.textView2);
+        btn1 = (Button) findViewById(R.id.btn1);
+        btn2 = (Button) findViewById(R.id.btn2);
+        btn3 = (Button) findViewById(R.id.btn3);
+        textView2 = (TextView) findViewById(R.id.textView2);
 
-        Bundle bb =this.getIntent().getExtras();
+       /* Bundle bb =this.getIntent().getExtras();
         final String stuname = bb.getString("name");
-        stuid = bb.getString("stuid");
+        stuid = bb.getString("stuid");*/
+        SharedPreferences msg1 = getSharedPreferences("login_msg", Context.MODE_PRIVATE);
+        String stuname = msg1.getString("name", "");
+        stuid = msg1.getString("stuid", "");
+
         textView2.setText(stuname);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent();
-                Bundle b = new Bundle();
-                b.putString("stuid",stuid);
-                i.putExtras(b);
-                i.setClass(StuMainPage.this, Main14Activity.class);
-                startActivity(i);
+                gettrend();
             }
         });
 
@@ -69,7 +73,7 @@ public class StuMainPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent();
                 Bundle b2 = new Bundle();
-                b2.putString("stuid",stuid);
+                b2.putString("stuid", stuid);
                 i.putExtras(b2);
                 i.setClass(StuMainPage.this, Teacher_giveback_list.class);
                 startActivity(i);
@@ -77,19 +81,56 @@ public class StuMainPage extends AppCompatActivity {
         });
     }
 
-    public void getList(){
-        Thread t4 = new Thread(new Runnable() {
+    private void gettrend() {
+        Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                SoapObject request = new SoapObject(NAMESPACE, METHOD_USERNAME_3);
-                request.addProperty("id",stuid);
+                SoapObject request = new SoapObject(NAMESPACE, METHOD_USERNAME_4);
+                request.addProperty("id", stuid);
                 SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                 envelope.dotNet = true;
                 envelope.setOutputSoapObject(request);
                 HttpTransportSE ht = new HttpTransportSE(URL);
-                try
-                {
-                    ht.call(NAMESPACE+METHOD_USERNAME_3, envelope);
+                try {
+                    ht.call(NAMESPACE + METHOD_USERNAME_4, envelope);
+                    Object response = (Object) envelope.getResponse();
+                    if (response != null) {
+                        String result = response.toString();
+                        String pattern = "string=";
+                        String b = result.replaceAll(pattern, "");
+                        String c = b.replace("anyType{", "");
+                        String d = c.replace(" }", "");
+                        String e = d.replaceAll("; ", "ㄅ");
+                        String f = e.replace(";", "");
+                        String g = f.replace("ㄅ", ",");
+                        Intent i = new Intent();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("response", g);
+                        i.putExtras(bundle);
+                        i.setClass(StuMainPage.this, Main14Activity.class);
+                        startActivity(i);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t1.start();
+
+    }
+
+    public void getList() {
+        Thread t4 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SoapObject request = new SoapObject(NAMESPACE, METHOD_USERNAME_3);
+                request.addProperty("id", stuid);
+                SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+                envelope.dotNet = true;
+                envelope.setOutputSoapObject(request);
+                HttpTransportSE ht = new HttpTransportSE(URL);
+                try {
+                    ht.call(NAMESPACE + METHOD_USERNAME_3, envelope);
                     Object response = (Object) envelope.getResponse();
                     if (response != null) {
                         String result = response.toString();
@@ -98,8 +139,8 @@ public class StuMainPage extends AppCompatActivity {
                         String c = b.replace("anyType{", "");
                         String d = c.replace(" }", "");
                         String e = d.replaceAll(",", "ㄅ");
-                        String f = e.replaceAll("; ","ㄅ");
-                        String g = f.replace(";","ㄅ");
+                        String f = e.replaceAll("; ", "ㄅ");
+                        String g = f.replace(";", "ㄅ");
                         String a = stuid;
                         Intent intent = new Intent();
                         Bundle bundle = new Bundle();
@@ -108,7 +149,7 @@ public class StuMainPage extends AppCompatActivity {
                         intent.putExtras(bundle);
                         intent.setClass(StuMainPage.this, Main9Activity.class);
                         startActivity(intent);
-                    }else{
+                    } else {
                         Intent intent = new Intent();
                         Bundle bundle = new Bundle();
                         bundle.putString("id", stuid);
@@ -117,9 +158,7 @@ public class StuMainPage extends AppCompatActivity {
                         intent.setClass(StuMainPage.this, Main9Activity.class);
                         startActivity(intent);
                     }
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -129,23 +168,23 @@ public class StuMainPage extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main13, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
             case R.id.password:
-                Intent intent= new Intent();
-                intent.setClass(StuMainPage.this,Main5Activity.class);
+                Intent intent = new Intent();
+                intent.setClass(StuMainPage.this, Main5Activity.class);
                 startActivity(intent);
                 return true;
 
             case R.id.logout:
                 Intent intent1 = new Intent();
-                intent1.setClass(StuMainPage.this,MainActivity.class);
+                intent1.setClass(StuMainPage.this, MainActivity.class);
                 startActivity(intent1);
                 return true;
 
