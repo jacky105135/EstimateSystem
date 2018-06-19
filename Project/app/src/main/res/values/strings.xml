@@ -15,4 +15,9 @@
     <string name="ex5">臨床判斷</string>
     <string name="ex6">組織效能</string>
     <string name="ex7">人道專業</string>
+    <string name="ok">提交</string>
+    <string name="input_ur_id">尚未輸入員工代號!!!</string>
+    <string name="input_ur_idnum">尚未輸入身分證後4碼!!!</string>
+    <string name="chkId_err">身分驗證有誤!!</string>
+    <string name="main_err">請填寫資料!</string>
 </resources>

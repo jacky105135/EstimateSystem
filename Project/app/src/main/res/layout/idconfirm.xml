@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="255dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="155dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorblue"
+        android:gravity="center"
+        android:text="身分驗證"
+        android:textStyle="bold"
+        android:textColor="@color/colorwhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/userid"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/button3"
+        android:hint="       輸入員工代號" />
+
+    <EditText
+        android:id="@+id/idnum"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/userid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:background="@drawable/button3"
+        android:hint="       輸入身分證後4碼" />
+
+
+</RelativeLayout>

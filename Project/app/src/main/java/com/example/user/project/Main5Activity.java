@@ -104,6 +104,7 @@ public class Main5Activity extends AppCompatActivity {
             String b = a.replace("Bundle[{name=","");
             String c = b.replace("}]","");
             id_num.setText(c);
+            Toast.makeText(getApplicationContext(), R.string.chkId_err, Toast.LENGTH_LONG).show();
         }
     };
 
