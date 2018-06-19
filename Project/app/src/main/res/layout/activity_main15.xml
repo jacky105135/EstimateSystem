@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        app:titleTextColor="@android:color/white"
+        app:titleTextColor="@color/colorblue"
         android:background="@color/colorblue">
         <TextView
             android:layout_width="wrap_content"
@@ -388,7 +388,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/racktangle"
-                android:backgroundTint="#B3B3B3"
+                android:backgroundTint="#4073a3"
                 android:text="下一步"
                 android:textColor="@color/colorwhite"
                 android:textSize="18sp"

@@ -11,5 +11,11 @@
     <color name="color1">#FF057E74</color>
     <color name="colorblue">#053562</color>
     <color name="colorgreen3">#03362c</color>
-
+    <color name="color_1">#ed2a2d</color>
+    <color name="color_2">#fca309</color>
+    <color name="color_3">#f0f411</color>
+    <color name="color_4">#3fe72d</color>
+    <color name="color_5">#188bb1</color>
+    <color name="color_6">#1d2ee1</color>
+    <color name="color_7">#ab25e1</color>
 </resources>

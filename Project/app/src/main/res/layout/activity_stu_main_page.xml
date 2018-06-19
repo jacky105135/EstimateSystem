@@ -7,11 +7,12 @@
     tools:context="com.example.user.project.StuMainPage">
 
     <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppTheme.AppBarOverlay"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:background="@color/colorblue"
-        app:titleTextColor="@android:color/white">
+        app:titleTextColor="@color/colorblue">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,18 +25,19 @@
 
     </android.support.v7.widget.Toolbar>
 
-
     <Button
         android:id="@+id/btn1"
         android:layout_width="291dp"
         android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="37dp"
+        android:layout_alignStart="@+id/btn2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="30dp"
         android:background="@drawable/btn1"
+        android:backgroundTint="#ff977a"
         android:drawableLeft="@drawable/trend"
         android:drawablePadding="-75dp"
-        android:paddingStart="55dp"
+        android:drawableTint="@color/colorwhite"
+        android:paddingStart="50dp"
         android:stateListAnimator="@null"
         android:text="趨勢圖"
         android:textColor="@color/colorwhite"
@@ -52,8 +54,10 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/btn2"
+        android:backgroundTint="#f77d91"
         android:drawableLeft="@drawable/analyze"
         android:drawablePadding="-75dp"
+        android:drawableTint="@color/colorwhite"
         android:paddingStart="55dp"
         android:stateListAnimator="@null"
         android:text="歷次評分"
@@ -71,8 +75,10 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/btn3"
+        android:backgroundTint="#4073a3"
         android:drawableLeft="@drawable/chat2"
         android:drawablePadding="-75dp"
+        android:drawableTint="@color/colorwhite"
         android:paddingStart="55dp"
         android:stateListAnimator="@null"
         android:text="回饋"
@@ -80,14 +86,22 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="98dp"
-        android:background="@drawable/circle"
+        android:background="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="TextView"
         android:textColor="@color/colorgray"

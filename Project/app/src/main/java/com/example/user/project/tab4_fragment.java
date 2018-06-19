@@ -55,12 +55,12 @@ public class tab4_fragment extends Fragment {
         View view = inflater.inflate(R.layout.tab4_fragment,container,false);
 
         chart = (RadarChart) view.findViewById(R.id.radarchart);
-        chart.setBackgroundColor(Color.rgb(60,65,82));
+        //chart.setBackgroundColor(Color.rgb(60,65,82));
         chart.getDescription().setEnabled(false);
         chart.setWebLineWidth(1f);
-        chart.setWebColor(Color.WHITE);
+        chart.setWebColor(Color.BLACK);
         chart.setWebLineWidth(1f);
-        chart.setWebColorInner(Color.WHITE);
+        chart.setWebColorInner(Color.BLACK);
         chart.setWebAlpha(100);
         setData();
 
@@ -83,7 +83,7 @@ public class tab4_fragment extends Fragment {
                 return 0;
             }
         });
-        xAxis.setTextColor(Color.WHITE);
+        xAxis.setTextColor(Color.BLACK);
 
         YAxis yAxis = chart.getYAxis();
         yAxis.setAxisMinimum(Min);

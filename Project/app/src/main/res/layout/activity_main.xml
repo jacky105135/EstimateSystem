@@ -5,40 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.project.MainActivity">
+
     <ImageView
+        android:id="@+id/login_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/login_background"
         android:scaleType="centerCrop"
-        android:id="@+id/login_background"/>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:id="@+id/logo"
-        android:src="@drawable/logo"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="20dp"/>
+        android:src="@drawable/login_background" />
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/logo" >
+        android:layout_marginTop="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/trans_white_rectangle"
-            android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
-            >
+            android:background="@drawable/trans_white_rectangle"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo2" />
+
             <RadioGroup
                 android:id="@+id/radiogroup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp">
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiobutton1"
@@ -50,8 +54,7 @@
                     android:text="指導教師"
                     android:textColor="@android:color/background_dark"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radiobutton2"
@@ -62,37 +65,36 @@
                     android:text="學員"
                     android:textColor="@android:color/background_dark"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
             </RadioGroup>
+
             <AutoCompleteTextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="員工代號"
-                android:background="@drawable/rounded_white"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:drawableLeft="@drawable/username"
-                android:textSize="18sp"
-                android:drawablePadding="20dp"
-                android:paddingStart="15dp"
                 android:id="@+id/username"
-                android:layout_marginBottom="20dp"
-                />
-            <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:hint="密碼"
-                android:background="@drawable/rounded_white"
-                android:layout_marginStart="15dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginEnd="15dp"
-                android:drawableLeft="@drawable/password"
-                android:textSize="18sp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/username"
                 android:drawablePadding="20dp"
+                android:hint="員工代號"
                 android:paddingStart="15dp"
-                android:inputType="textPassword"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
                 android:id="@+id/password"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="20dp"
+                android:hint="密碼"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button1"
@@ -105,39 +107,38 @@
                 android:text="登入"
                 android:textColor="@color/colorwhite"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <RelativeLayout
-                android:layout_below="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textview1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="5dp"
-                android:background="?attr/editTextBackground"
-                android:text="註冊"
-                android:textAllCaps="false"
-                android:textColor="@color/colorblue"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:layout_below="@+id/button1">
 
-            <TextView
-                android:id="@+id/textview2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="180dp"
-                android:layout_marginTop="5dp"
-                android:background="?attr/editTextBackground"
-                android:text="忘記密碼"
-                android:textAllCaps="false"
-                android:textColor="@color/colorblue"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/editTextBackground"
+                    android:text="註冊"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/editTextBackground"
+                    android:text="忘記密碼"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -145,57 +146,54 @@
 
     </ScrollView>
 
-   <!--<android.support.v7.widget.Toolbar
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="@color/colorPrimary">
-        <TextView
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="登入"
-            android:textColor="#ffffff"
-            android:textSize="22sp"
-            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
-    </android.support.v7.widget.Toolbar>-->
+    <!--<android.support.v7.widget.Toolbar
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="62dp"
+         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+         android:background="@color/colorPrimary">
+         <TextView
+             android:id="@+id/login"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:text="登入"
+             android:textColor="#ffffff"
+             android:textSize="22sp"
+             style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+     </android.support.v7.widget.Toolbar>-->
 
 
+    <!-- <EditText
+         android:id="@+id/username"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_alignParentStart="true"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:layout_marginTop="180dp"
+         android:background="@android:drawable/editbox_background"
+         android:ems="20"
+         android:hint="員工代號"
+         android:textSize="20sp"
+         android:textStyle="bold|italic" />
 
-   <!-- <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="180dp"
-        android:background="@android:drawable/editbox_background"
-        android:ems="20"
-        android:hint="員工代號"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/username"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@android:drawable/editbox_background"
-        android:ems="10"
-        android:hint="密碼"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />-->
-
-
+     <EditText
+         android:id="@+id/password"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_alignParentStart="true"
+         android:layout_below="@+id/username"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:layout_marginTop="10dp"
+         android:background="@android:drawable/editbox_background"
+         android:ems="10"
+         android:hint="密碼"
+         android:inputType="textPassword"
+         android:textSize="20sp"
+         android:textStyle="bold|italic" />-->
 
 
 </RelativeLayout>

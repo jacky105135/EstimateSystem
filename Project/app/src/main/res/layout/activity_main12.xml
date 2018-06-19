@@ -6,31 +6,36 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.project.Main12Activity">
 
-    <android.support.v7.widget.Toolbar
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="62dp"
-        app:titleTextColor="@android:color/white"
-        android:background="@color/colorblue">
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="mini-CEX"
-            android:textSize="22sp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="#ffffff"
-            />
+        <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/colorblue"
+            app:titleTextColor="@color/colorblue">
 
-    </android.support.v7.widget.Toolbar>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="mini-CEX"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/toolbar">
+        android:layout_below="@+id/appbar">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -47,8 +52,7 @@
                 android:paddingStart="150dp"
                 android:text="地點"
                 android:textColor="@color/colorwhite"
-                android:textSize="25sp"
-                />
+                android:textSize="25sp" />
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
@@ -115,10 +119,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_below="@+id/patient"
+                android:layout_marginTop="5dp"
                 android:paddingStart="4dp"
                 android:text="性別"
-                android:textSize="22sp"
-                android:layout_marginTop="5dp"/>
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/age"
@@ -136,7 +140,7 @@
                 android:layout_height="35dp"
                 android:layout_alignStart="@+id/radioGroup4"
                 android:layout_below="@+id/radioGroup4"
-                android:background="#fafafa"/>
+                android:background="#fafafa" />
 
             <RadioGroup
                 android:id="@+id/radioGroup3"
@@ -144,8 +148,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/patient"
                 android:layout_marginLeft="60dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="150dp"
@@ -233,8 +237,8 @@
                 android:layout_height="65dp"
                 android:layout_below="@+id/analyze"
                 android:layout_marginLeft="60dp"
-                android:textSize="20sp"
-                android:background="#fafafa"/>
+                android:background="#fafafa"
+                android:textSize="20sp" />
 
         </RelativeLayout>
     </ScrollView>
@@ -246,10 +250,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/racktangle"
-        android:backgroundTint="#B3B3B3"
+        android:backgroundTint="#4073a3"
         android:text="下一步"
         android:textColor="@color/colorwhite"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
 </RelativeLayout>
 

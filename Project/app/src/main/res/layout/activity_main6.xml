@@ -11,7 +11,7 @@
         android:id="@+id/tb_toolbar"
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        app:titleTextColor="@android:color/white"
+        app:titleTextColor="@color/colorblue"
         android:background="@color/colorblue">
         <TextView
             android:layout_width="wrap_content"

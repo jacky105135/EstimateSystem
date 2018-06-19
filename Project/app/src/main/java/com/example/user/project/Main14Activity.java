@@ -166,31 +166,38 @@ public class Main14Activity extends AppCompatActivity {
         }
 
         BarDataSet set1 = new BarDataSet(yvalues,"醫療面談");
-        set1.setColor(Color.RED);
+        int color1 = getResources().getColor(R.color.color_1);
+        set1.setColor(color1);
 
 
         BarDataSet set2 = new BarDataSet(yvalues2,"身體檢查");
-        set2.setColor(Color.GREEN);
-
+        int color2 = getResources().getColor(R.color.color_2);
+        set2.setColor(color2);
 
         BarDataSet set3 = new BarDataSet(yvalues3,"操作技能");
-        set3.setColor(Color.GRAY);
+        int color3 = getResources().getColor(R.color.color_3);
+        set3.setColor(color3);
 
 
         BarDataSet set4 = new BarDataSet(yvalues4,"諮商衛教");
-        set4.setColor(Color.BLUE);
+        int color4 = getResources().getColor(R.color.color_4);
+        set4.setColor(color4);
 
 
         BarDataSet set5 = new BarDataSet(yvalues5,"臨床判斷");
-        set5.setColor(Color.BLACK);
+        int color5 = getResources().getColor(R.color.color_5);
+        set5.setColor(color5);
 
 
         BarDataSet set6 = new BarDataSet(yvalues6,"組織效能");
         set6.setColor(Color.YELLOW);
+        int color6 = getResources().getColor(R.color.color_6);
+        set6.setColor(color6);
 
 
         BarDataSet set7 = new BarDataSet(yvalues7,"人道專業");
-        set7.setColor(Color.CYAN);
+        int color7 = getResources().getColor(R.color.color_7);
+        set7.setColor(color7);
 
         ArrayList<IBarDataSet> bardata = new ArrayList<>();//IBarDataSet 接口很关键，是添加多组数据的关键结构，LineChart也是可以采用对应的接口类，也可以添加多组数据
         bardata.add(set1);

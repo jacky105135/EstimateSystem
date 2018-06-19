@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.project.TselfRec">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:titleTextColor="@color/colorblue">
 
     </android.support.v7.widget.Toolbar>
 
@@ -53,8 +55,7 @@
         android:id="@+id/listview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/date">
-    </ListView>
+        android:layout_below="@+id/date"></ListView>
 
     <TextView
         android:layout_width="wrap_content"

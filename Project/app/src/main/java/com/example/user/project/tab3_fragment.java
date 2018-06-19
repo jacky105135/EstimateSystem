@@ -76,19 +76,19 @@ public class tab3_fragment extends Fragment {
         View view = inflater.inflate(R.layout.tab3_fragment,container,false);
 
         chart = (RadarChart) view.findViewById(R.id.radarchart);
-        chart.setBackgroundColor(Color.rgb(60,65,82));
+        //chart.setBackgroundColor(Color.rgb(60,65,82));
         chart.getDescription().setEnabled(false);
         chart.setWebLineWidth(1f);
-        chart.setWebColor(Color.WHITE);
+        chart.setWebColor(Color.BLACK);
         chart.setWebLineWidth(1f);
-        chart.setWebColorInner(Color.WHITE);
+        chart.setWebColorInner(Color.BLACK);
         chart.setWebAlpha(100);
         setData();
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setXOffset(0f);
         xAxis.setYOffset(0f);
-        xAxis.setTextSize(12f);
+        xAxis.setTextSize(15f);
         xAxis.setValueFormatter(new IAxisValueFormatter() {
 
             private String[] mFactors = new String[]{getString(factors.get(1)), getString(factors.get(2)),
@@ -104,7 +104,7 @@ public class tab3_fragment extends Fragment {
                 return 0;
             }
         });
-        xAxis.setTextColor(Color.WHITE);
+        xAxis.setTextColor(Color.BLACK);
 
         YAxis yAxis = chart.getYAxis();
         yAxis.setAxisMinimum(Min);
@@ -210,7 +210,7 @@ public class tab3_fragment extends Fragment {
         RadarData data = new RadarData(set1);
         data.setDrawValues(false);
         data.setValueTextSize(8f);
-        data.setValueTextColor(Color.WHITE);
+        data.setValueTextColor(Color.BLACK);
 
         chart.setData(data);
         chart.invalidate();

@@ -9,10 +9,11 @@
 
     <android.support.v7.widget.Toolbar
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppTheme.AppBarOverlay"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        app:titleTextColor="@android:color/white"
+        app:titleTextColor="@color/colorblue"
         android:background="@color/colorblue">
         <TextView
             android:layout_width="wrap_content"

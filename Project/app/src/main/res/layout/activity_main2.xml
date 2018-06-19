@@ -11,6 +11,7 @@
             android:id="@+id/tb_toolbar"
             android:layout_width="match_parent"
             android:layout_height="62dp"
+            app:titleTextColor="@color/colorblue"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:background="@color/colorblue">
             <TextView
@@ -78,10 +79,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="205dp"
-        android:background="@drawable/button2"
+        android:background="@drawable/button3"
         android:stateListAnimator="@null"
         android:text="指導教師"
-        android:textColor="@color/colorwhite"
+        android:textColor="#4073a3"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -92,9 +93,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="179dp"
-        android:background="@drawable/button2"
+        android:background="@drawable/button3"
         android:text="學員"
-        android:textColor="@color/colorwhite"
+        android:textColor="#4073a3"
         android:textSize="20sp"
         android:textStyle="bold" />
 

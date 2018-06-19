@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import org.ksoap2.SoapEnvelope;
@@ -23,6 +25,7 @@ public class StuMainPage extends AppCompatActivity {
 
     Button btn1, btn2, btn3;
     TextView textView2;
+    ImageButton imageButton;
     private static final String NAMESPACE = "http://tempuri.org/";
     private static final String URL = "http://123.193.214.240:8008/WebService1.asmx";
     private static final String METHOD_USERNAME_3 = "select_listview";
@@ -44,6 +47,8 @@ public class StuMainPage extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
         textView2 = (TextView) findViewById(R.id.textView2);
+        imageButton = (ImageButton) findViewById(R.id.imageButton);
+
 
        /* Bundle bb =this.getIntent().getExtras();
         final String stuname = bb.getString("name");
@@ -53,6 +58,7 @@ public class StuMainPage extends AppCompatActivity {
         stuid = msg1.getString("stuid", "");
 
         textView2.setText(stuname);
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
