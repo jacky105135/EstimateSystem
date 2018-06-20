@@ -23,20 +23,22 @@
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_below="@+id/title"
+        android:paddingStart="25dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30sp"
         android:background="@drawable/button3"
-        android:hint="       輸入員工代號" />
+        android:hint="輸入員工代號" />
 
     <EditText
         android:id="@+id/idnum"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_below="@+id/userid"
+        android:paddingStart="25dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25sp"
         android:background="@drawable/button3"
-        android:hint="       輸入身分證後4碼" />
+        android:hint="輸入身分證後4碼" />
 
 
 </RelativeLayout>
