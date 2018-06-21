@@ -132,7 +132,7 @@ public class Main2Activity extends AppCompatActivity {
                                         if (parentViewGroup != null) {
                                             a.setText("");
                                             b.setText("");
-                                            Toast.makeText(getApplicationContext(), R.string.chkId_err, Toast.LENGTH_LONG).show();
+                                           // Toast.makeText(getApplicationContext(), R.string.chkId_err, Toast.LENGTH_LONG).show();
                                             parentViewGroup.removeView(item);
                                         }
                                     }

@@ -98,6 +98,7 @@ public class Main13Activity extends AppCompatActivity {
                 .putString("gender",gender)
                 .putString("patient_sign",patient_sign)
                 .putString("patient_age",patient_age)
+                .putString("id",id)
                 .apply();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);

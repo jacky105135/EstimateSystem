@@ -149,18 +149,28 @@ public class StuMainPage extends AppCompatActivity {
                         String g = f.replace(";", "ㄅ");
                         String a = stuid;
                         Intent intent = new Intent();
-                        Bundle bundle = new Bundle();
+                       /* Bundle bundle = new Bundle();
                         bundle.putString("id", a);
                         bundle.putString("result", g);
-                        intent.putExtras(bundle);
+                        intent.putExtras(bundle);*/
+                        SharedPreferences msp1 = getSharedPreferences("rec_list", MODE_PRIVATE);
+                        msp1.edit()
+                                .putString("id",a)
+                                .putString("result",g)
+                                .apply();
                         intent.setClass(StuMainPage.this, Main9Activity.class);
                         startActivity(intent);
                     } else {
                         Intent intent = new Intent();
-                        Bundle bundle = new Bundle();
+                        /*Bundle bundle = new Bundle();
                         bundle.putString("id", stuid);
                         bundle.putString("result", "");
-                        intent.putExtras(bundle);
+                        intent.putExtras(bundle);*/
+                        SharedPreferences msp1 = getSharedPreferences("rec_list", MODE_PRIVATE);
+                        msp1.edit()
+                                .putString("id",stuid)
+                                .putString("result","")
+                                .apply();
                         intent.setClass(StuMainPage.this, Main9Activity.class);
                         startActivity(intent);
                     }

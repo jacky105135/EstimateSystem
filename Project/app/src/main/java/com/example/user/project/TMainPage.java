@@ -75,14 +75,22 @@ public class TMainPage extends AppCompatActivity {
                                 String g = f.replace(";", "");
                                 //String f[] = e.split(";");
                                 Intent intent = new Intent();
-                                Bundle bundle = new Bundle();
+                               /* Bundle bundle = new Bundle();
                                 bundle.putString("list", g);
-                                intent.putExtras(bundle);
+                                intent.putExtras(bundle);*/
+                                SharedPreferences msp1 = getSharedPreferences("self_rec", MODE_PRIVATE);
+                                msp1.edit()
+                                        .putString("list",g)
+                                        .apply();
                                 intent.setClass(TMainPage.this, TselfRec.class);
                                 startActivity(intent);
                             } else {
                                 Intent intent1 = new Intent();
                                 intent1.setClass(TMainPage.this, TselfRec.class);
+                                SharedPreferences msp1 = getSharedPreferences("self_rec", MODE_PRIVATE);
+                                msp1.edit()
+                                        .putString("list","")
+                                        .apply();
                                 startActivity(intent1);
                             }
                         } catch (Exception e) {
@@ -98,9 +106,13 @@ public class TMainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(TMainPage.this, Main7Activity.class);
-                Bundle b = new Bundle();
+                /*Bundle b = new Bundle();
                 b.putString("id", tname);
-                i.putExtras(b);
+                i.putExtras(b);*/
+                SharedPreferences msp1 = getSharedPreferences("tname", MODE_PRIVATE);
+                msp1.edit()
+                        .putString("tname",tname)
+                        .apply();
                 startActivity(i);
             }
         });

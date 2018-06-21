@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
@@ -104,10 +105,8 @@ public class tChange_rec3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 t1.start();
-                Intent i = new Intent(tChange_rec3.this,TMainPage.class);
-                Bundle b = new Bundle();
-                b.putString("name",Tname1);
-                i.putExtras(b);
+                Intent i = new Intent(tChange_rec3.this,TselfRec.class);
+                Toast.makeText(tChange_rec3.this, "成績已修改", Toast.LENGTH_SHORT).show();
                 startActivity(i);
             }
         });

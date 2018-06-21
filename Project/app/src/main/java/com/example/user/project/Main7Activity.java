@@ -38,8 +38,10 @@ public class Main7Activity extends AppCompatActivity {
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Bundle b1 = this.getIntent().getExtras();
-        final String Tname = b1.getString("id");
+        //Bundle b1 = this.getIntent().getExtras();
+        SharedPreferences msg2 = getSharedPreferences("tname", Context.MODE_PRIVATE);
+        final String Tname = msg2.getString("tname", "");
+
 
         SharedPreferences msp0 = getSharedPreferences("test", MODE_PRIVATE);
         msp0.edit()

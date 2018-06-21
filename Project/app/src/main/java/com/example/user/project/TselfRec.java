@@ -2,6 +2,7 @@ package com.example.user.project;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -23,7 +24,7 @@ import org.ksoap2.transport.HttpTransportSE;
 public class TselfRec extends AppCompatActivity {
 
 
-    private static  final String NAMESPACE = "http://tempuri.org/";
+    private static final String NAMESPACE = "http://tempuri.org/";
     private static final String URL = "http://123.193.214.240:8008/WebService1.asmx";
     private static final String METHOD_USERNAME_3 = "select_rec_table";
 
@@ -39,46 +40,44 @@ public class TselfRec extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        listView1 = (ListView)findViewById(R.id.listview1);
+        listView1 = (ListView) findViewById(R.id.listview1);
 
-        Bundle b1 = this.getIntent().getExtras();
-        if (b1 != null) {
-        final String result = b1.getString("list");
-            response = result.split("ㄅ");
-            adapter = new ViewAdapter(TselfRec.this);
-            listView1.setAdapter(adapter);
-        }
+        /*Bundle b1 = this.getIntent().getExtras();*/
+        SharedPreferences msg2 = getSharedPreferences("self_rec", Context.MODE_PRIVATE);
+        String result = msg2.getString("list", "");
+        response = result.split("ㄅ");
+        adapter = new ViewAdapter(TselfRec.this);
+        listView1.setAdapter(adapter);
 
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                final String stuid = (String) adapter.getItem(position*3);
-                final String diagnose = (String)adapter.getItem(position*3+1);
-                final String tname =(String) adapter.getItem(position*3 + 2);
+                final String stuid = (String) adapter.getItem(position * 3);
+                final String diagnose = (String) adapter.getItem(position * 3 + 1);
+                final String tname = (String) adapter.getItem(position * 3 + 2);
 
                 Thread t1 = new Thread(new Runnable() {
                     @Override
                     public void run() {
 
                         SoapObject request = new SoapObject(NAMESPACE, METHOD_USERNAME_3);
-                        request.addProperty("id",stuid);
-                        request.addProperty("diagnose",diagnose);
-                        request.addProperty("Tname",tname);
+                        request.addProperty("id", stuid);
+                        request.addProperty("diagnose", diagnose);
+                        request.addProperty("Tname", tname);
                         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
                         envelope.dotNet = true;
                         envelope.setOutputSoapObject(request);
                         HttpTransportSE ht = new HttpTransportSE(URL);
-                        try
-                        {
-                            ht.call(NAMESPACE+METHOD_USERNAME_3, envelope);
+                        try {
+                            ht.call(NAMESPACE + METHOD_USERNAME_3, envelope);
                             Object response = (Object) envelope.getResponse();
                             String result = response.toString();
                             String pattern = "string=";
-                            String b = result.replaceAll(pattern,"");
-                            String c = b.replace("anyType{","");
-                            String d = c.replace(" }","");
-                            String d1 = d.replace(";","");
+                            String b = result.replaceAll(pattern, "");
+                            String c = b.replace("anyType{", "");
+                            String d = c.replace(" }", "");
+                            String d1 = d.replace(";", ",");
                             String e[] = d1.split(",");
                             String date = e[0];
                             String position = e[1];
@@ -101,33 +100,32 @@ public class TselfRec extends AppCompatActivity {
 
                             Intent intent = new Intent();
                             Bundle bundle = new Bundle();
-                            bundle.putString("id",stuid);
-                            bundle.putString("date",date);
-                            bundle.putString("Tname",tname);
-                            bundle.putString("date",date);
-                            bundle.putString("position",position);
-                            bundle.putString("operation",operation);
-                            bundle.putString("ex1",ex1);
-                            bundle.putString("ex2",ex2);
-                            bundle.putString("ex3",ex3);
-                            bundle.putString("ex4",ex4);
-                            bundle.putString("ex5",ex5);
-                            bundle.putString("ex6",ex6);
-                            bundle.putString("ex7",ex7);
-                            bundle.putString("GB",GB);
-                            bundle.putString("OB_Time",OB_Time);
-                            bundle.putString("GB_Time",GB_Time);
-                            bundle.putString("name",name);
-                            bundle.putString("gender",gender);
-                            bundle.putString("patient_sign",patient_sign);
-                            bundle.putString("patient_age",patient_age);
-                            bundle.putString("diagnose",diagnose);
+                            bundle.putString("id", stuid);
+                            bundle.putString("date", date);
+                            bundle.putString("Tname", tname);
+                            bundle.putString("position", position);
+                            bundle.putString("operation", operation);
+                            bundle.putString("ex1", ex1);
+                            bundle.putString("ex2", ex2);
+                            bundle.putString("ex3", ex3);
+                            bundle.putString("ex4", ex4);
+                            bundle.putString("ex5", ex5);
+                            bundle.putString("ex6", ex6);
+                            bundle.putString("ex7", ex7);
+                            bundle.putString("GB", GB);
+                            bundle.putString("OB_Time", OB_Time);
+                            bundle.putString("GB_Time", GB_Time);
+                            bundle.putString("name", name);
+                            bundle.putString("gender", gender);
+                            bundle.putString("patient_sign", patient_sign);
+                            bundle.putString("patient_age", patient_age);
+                            bundle.putString("diagnose", diagnose);
 
                             intent.putExtras(bundle);
-                            intent.setClass(TselfRec.this,TChangeRec1.class);
+                            intent.setClass(TselfRec.this, TChangeRec1.class);
                             startActivity(intent);
 
-                        }catch (Exception e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
@@ -147,7 +145,7 @@ public class TselfRec extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return (response.length)/3;
+            return (response.length) / 3;
         }
 
         @Override
@@ -168,20 +166,21 @@ public class TselfRec extends AppCompatActivity {
             TextView diagnose = (TextView) convertView.findViewById(R.id.diagnose);
             TextView Tname = (TextView) convertView.findViewById(R.id.Tname);
 
-            date.setText(response[position*3]);
-            diagnose.setText(response[(position*3) + 1]);
-            Tname.setText(response[(position*3) + 2]);
+            date.setText(response[position * 3]);
+            diagnose.setText(response[(position * 3) + 1]);
+            Tname.setText(response[(position * 3) + 2]);
             return convertView;
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
             case R.id.backtomain:
@@ -191,14 +190,14 @@ public class TselfRec extends AppCompatActivity {
                 return true;
 
             case R.id.password:
-                Intent intent= new Intent();
-                intent.setClass(TselfRec.this,Main5Activity.class);
+                Intent intent = new Intent();
+                intent.setClass(TselfRec.this, Main5Activity.class);
                 startActivity(intent);
                 return true;
 
             case R.id.logout:
                 Intent intent1 = new Intent();
-                intent1.setClass(TselfRec.this,MainActivity.class);
+                intent1.setClass(TselfRec.this, MainActivity.class);
                 startActivity(intent1);
                 return true;
 

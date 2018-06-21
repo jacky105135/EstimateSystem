@@ -49,10 +49,15 @@ public class Main9Activity extends AppCompatActivity {
 
         listView1 = (ListView) findViewById(R.id.listview1);
 
-        Bundle b1 = this.getIntent().getExtras();
+        /*Bundle b1 = this.getIntent().getExtras();
         final String result = b1.getString("result");
         response = result.split("ㄅ");
-        final String a1 = b1.getString("id");
+        final String a1 = b1.getString("id");*/
+
+        SharedPreferences msg1 = getSharedPreferences("rec_list", Context.MODE_PRIVATE);
+        final String a1 = msg1.getString("id", "");
+        String result = msg1.getString("result", "");
+        response = result.split("ㄅ");
 
         adapter = new ViewAdapter(Main9Activity.this);
         listView1.setAdapter(adapter);

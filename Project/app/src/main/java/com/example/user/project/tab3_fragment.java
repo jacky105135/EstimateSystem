@@ -121,9 +121,10 @@ public class tab3_fragment extends Fragment {
                 Easing.EasingOption.EaseInOutQuad);
 
         SharedPreferences msg = getActivity().getSharedPreferences("result", Context.MODE_PRIVATE);
-        final String a = msg.getString("date","");
+        final String c = msg.getString("date","");
+        final String a = c.replace("/","-");
         final String n = msg.getString("id","");
-        final String o = msg.getString("name","");
+        final String o = msg.getString("Tname","");
 
         gradeconfirm = (Button)view.findViewById(R.id.gradeconfirm);
         stufeedback = (Button)view.findViewById(R.id.stufeedback);
@@ -141,7 +142,7 @@ public class tab3_fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 t2.start();
-                Intent i = new Intent(getActivity(),MainActivity.class);
+                Intent i = new Intent(getActivity(),Main9Activity.class);
                 getActivity().startActivity(i);
                 Toast.makeText(getActivity(), "成績已送出，無法再做更改!", Toast.LENGTH_SHORT).show();
             }
