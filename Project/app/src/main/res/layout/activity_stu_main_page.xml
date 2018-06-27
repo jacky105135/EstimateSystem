@@ -60,7 +60,7 @@
         android:drawableTint="@color/colorwhite"
         android:paddingStart="55dp"
         android:stateListAnimator="@null"
-        android:text="歷次評分"
+        android:text="歷次評量"
         android:textColor="@color/colorwhite"
         android:textSize="20sp"
         android:textStyle="bold" />

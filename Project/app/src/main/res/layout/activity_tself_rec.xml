@@ -24,7 +24,7 @@
         android:layout_below="@+id/toolbar"
         android:layout_marginStart="5dp"
         android:background="@android:drawable/editbox_background"
-        android:text="學員ID"
+        android:text="學員"
         android:textAlignment="center"
         android:textSize="22sp" />
 

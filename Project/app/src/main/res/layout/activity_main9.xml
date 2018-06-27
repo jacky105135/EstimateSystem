@@ -11,19 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:background="?attr/colorPrimary"
-        app:titleTextColor="@color/colorblue"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:titleTextColor="@color/colorblue">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="歷次評分"
-            android:textSize="22sp"
             android:layout_gravity="center"
+            android:text="歷次評量"
             android:textColor="#ffffff"
-            android:textStyle="bold"
-            />
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -62,12 +61,10 @@
 
 
     <ListView
-                android:id="@+id/listview1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/date">
-            </ListView>
-
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"></ListView>
 
 
 </RelativeLayout>

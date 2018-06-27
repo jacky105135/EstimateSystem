@@ -166,7 +166,7 @@ public class TselfRec extends AppCompatActivity {
             TextView diagnose = (TextView) convertView.findViewById(R.id.diagnose);
             TextView Tname = (TextView) convertView.findViewById(R.id.Tname);
 
-            date.setText(response[position * 3]);
+            date.setText(response[(position * 3)]);
             diagnose.setText(response[(position * 3) + 1]);
             Tname.setText(response[(position * 3) + 2]);
             return convertView;
